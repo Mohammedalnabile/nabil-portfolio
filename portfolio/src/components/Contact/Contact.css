@@ -1,0 +1,226 @@
+.contact-section {
+  padding: 5rem 2rem;
+  background: #0a1929;
+  position: relative;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #d4af37, #f5deb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #f5deb3);
+  border-radius: 2px;
+}
+
+.social-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.social-card {
+  background: #1e3a5f;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(245, 222, 179, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateX(10px);
+  border-color: #d4af37;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.social-card:hover::before {
+  opacity: 1;
+}
+
+.social-card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.social-card:hover .social-card-icon {
+  background: linear-gradient(135deg, #d4af37, #f5deb3);
+  color: #0a1929;
+  transform: scale(1.1);
+}
+
+.social-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.social-card-content h3 {
+  color: #f5f5dc;
+  font-size: 1.3rem;
+  margin: 0 0 0.3rem 0;
+  font-weight: 600;
+}
+
+.social-card-content p {
+  color: #d4c5a9;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.contact-cta {
+  background: #1e3a5f;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cta-message {
+  color: #e8d4b0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.email-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #d4af37, #f5deb3);
+  color: #0a1929;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.email-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.6);
+}
+
+.scroll-to-top {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.scroll-btn {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #d4af37, #f5deb3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a1929;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  animation: bounce-up 2s ease-in-out infinite;
+}
+
+@keyframes bounce-up {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.scroll-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+  animation: none;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .social-card {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .social-card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .social-card-content p {
+    font-size: 0.85rem;
+  }
+
+  .contact-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-message {
+    font-size: 1rem;
+  }
+
+  .email-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
