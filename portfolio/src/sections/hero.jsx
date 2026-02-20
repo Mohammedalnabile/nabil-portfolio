@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import profilePic from "../assets/profile.jpg"; // تأكد من اسم الملف هنا
+import profilePic from "../../assets/profile.jpg"; // تأكد من اسم الملف هنا
 
 function Hero() {
   return (
